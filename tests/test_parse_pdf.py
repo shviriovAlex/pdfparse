@@ -1,7 +1,7 @@
 from pytest import mark
 from unittest.mock import patch
 
-from parse_pdf import convert_pdf_data_list_to_dict, get_pdf_data
+from parse_pdf import transform_pdf_data_list_to_dict, get_pdf_data
 from compare_pdf import compare_pdfs
 
 
@@ -21,7 +21,7 @@ def test_get_pdf_data_path():
       {'Qty: 1NOTES:': None, 'inspection notes': ''})]
 )
 def test_transform_pdf_data_to_dict(test_list, er):
-    ar = convert_pdf_data_list_to_dict(test_list)
+    ar = transform_pdf_data_list_to_dict(test_list)
     assert ar == er, "Incorrect to dict"
 
 

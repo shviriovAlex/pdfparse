@@ -30,11 +30,11 @@ def transform_pdf_data_to_list(str_pdf: str) -> list:
     return list_pdf_data
 
 
-def convert_pdf_data_list_to_dict(pdf_list: list) -> dict[str, str or None]:
+def transform_pdf_data_list_to_dict(pdf_list: list) -> dict[str, str or None]:
     """
     Transform data from list to dict.
     :param pdf_list:
-    :return: dict
+    :return: dict with pdf data
     """
     result = {}
     for row in pdf_list:
